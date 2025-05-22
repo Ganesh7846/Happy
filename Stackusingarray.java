@@ -36,11 +36,7 @@ class Stack {
     }
     
     public boolean isFull(){
-        if(top==cap-1){
-            System.out.print("Stack is full");
-            return false;
-        }
-        return true;
+       return top==cap-1;
     }
     
     public boolean isEmpty(){
