@@ -42,6 +42,11 @@ class Stack {
     public boolean isEmpty(){
         return top<0;
     }
+    public void display() {
+        while(top>=0) {
+            System.out.println(a[top--]);
+        }
+    }
 }
 public class Main{
     public static void main(String [] args) {
