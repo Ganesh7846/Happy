@@ -1,55 +1,54 @@
-class Rectangle {
-    private int length;
-    private int width;
-
-    Rectangle(int l , int w){
-        this.length = l;
-        this.width = w;
+class Student {
+    String Name;
+    int roll_No;
+    int marks;
+    
+    Student(String Name,int roll_No,int marks) {
+        this.Name = Name;
+        this.roll_No = roll_No;
+        this.marks = marks;
     }
 
-    Rectangle(){
-        this.length = 1;
-        this.width = 1;
-    }
-
-    public int getLength(){
-        return length;
-    }
-
-    public void setLength(int length) {
-        if(length < 0){
-            System.out.println("enter the positive number:");
-        }else{
-            this.length = length;
+    public void StudentGread(){
+        if(marks >= 90) {
+            System.out.println("Grade : "+"A+");
+        }else if(marks >= 85) {
+            System.out.println("Grade : "+"A");
+        }else if(marks >= 80) {
+            System.out.println("Grade : "+"B+");
+        }else if(marks >= 70) {
+            System.out.println("Grade : "+"B");
+        }else if(marks >= 65){
+            System.out.println("Grade : "+"C+");
+        }else {
+            System.out.println("Grade : "+"C");
         }
     }
 
-    public int getwidth() {
-        return width;
+    public void Display(){
+        System.out.println("--------Student Details--------");
+        System.out.println("Name : "+Name);
+        System.out.println("Roll.No : "+roll_No);
+        System.out.println("Marks : "+marks);
+        StudentGread();
+        System.out.println("-------------------------------");
     }
-
-    public void setwidth(int width) {
-        if(width < 0) {
-            System.out.println("width should be positive");
-        }else{
-            this.width = width;
-        }
-    }
-
-    public void calculate(){
-        System.out.println(length*width);
-    }
-
 }
 public class sum {
-    public static void main(String []args){
-    Rectangle r = new Rectangle();
-    r.calculate();
+    public static void main (String [] args) {
+        Student d = new Student("ganesh", 33, 90);
+        Student b = new Student("Bablu",89,99);
+        Student c = new Student("praveen",6,55);
+        Student e = new Student("vishwa",56,89);
+        Student f = new Student("Praveen",4,34);
+        Student g = new Student("vijju",68,29);
 
-    r.setLength(9);
-    r.setwidth(5);
-    r.calculate();
-    Rectangle d = new Rectangle(8,5);
-    d.calculate();
-    }
+        d.Display();
+        b.Display();
+        c.Display();
+        e.Display();
+        f.Display();
+        g.Display();
+        
+    } 
 }
