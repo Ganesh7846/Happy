@@ -1,3 +1,4 @@
+//program to calculate the grade using student marks
 class Student {
     String Name;
     int roll_No;
@@ -7,9 +8,10 @@ class Student {
         this.Name = Name;
         this.roll_No = roll_No;
         this.marks = marks;
-    }
-
-    public void StudentGread(){
+    } 
+    
+    //method to calculate the grade
+    public void StudentGrade(){
         if(marks >= 90) {
             System.out.println("Grade : "+"A+");
         }else if(marks >= 85) {
@@ -24,13 +26,14 @@ class Student {
             System.out.println("Grade : "+"C");
         }
     }
-
+    
+    //Method to display Student Details
     public void Display(){
         System.out.println("--------Student Details--------");
         System.out.println("Name : "+Name);
         System.out.println("Roll.No : "+roll_No);
         System.out.println("Marks : "+marks);
-        StudentGread();
+        StudentGrade();
         System.out.println("-------------------------------");
     }
 }
